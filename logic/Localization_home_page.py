@@ -24,6 +24,7 @@ class LocalizationPage(Base_Page):
     LANGUAGE_SELECTOR = '//select[@id="language-selector"]'
     FRENCH_OPTION = '//option[@value="fr"]'
     HOME_PAGE_BUTTON = '//a[@data-testid="header-home-link"]'
+
     def __init__(self, driver):
         super().__init__(driver)
 

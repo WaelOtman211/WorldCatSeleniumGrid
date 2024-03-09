@@ -1,6 +1,8 @@
+from infra.base_page import Base_Page
 
 
-class UserLogic:
+class UserLogic(Base_Page):
+
     def __init__(self, api_object):
         self.api = api_object
 

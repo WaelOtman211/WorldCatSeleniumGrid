@@ -4,14 +4,14 @@
     "id": 0,
     "name": "dogs"
   },
-  "name": "roxi",
+  "name": "soso",
   "photoUrls": [
     "string"
   ],
   "tags": [
     {
       "id": 0,
-      "name": "roxi a good dog"
+      "name": "soso a good dog"
     }
   ],
   "status": "available"

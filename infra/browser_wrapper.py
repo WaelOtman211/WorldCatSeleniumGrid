@@ -1,11 +1,13 @@
 from selenium import webdriver
+
+from infra.api_wrapper import APIWrapper
 from infra.config_handler import ConfigHandler
 
 
 class BrowserWrapper:
     def __init__(self):
         self.driver = None
-        config_file_path = 'C:/Users/saher/OneDrive/קבצים מצורפים/שולחן העבודה/ProjectByeondevClient/infra/config.json'
+        config_file_path = r'C:\Users\saher\OneDrive\קבצים מצורפים\שולחן העבודה\repos\WorldCatSeleniumGrid\infra\config.json'
         self.config_handler = ConfigHandler(config_file_path)
         self.grid_enabled = self.config_handler.get_config_value('grid')
         self.serial_enabled = self.config_handler.get_config_value('serial')
@@ -14,6 +16,8 @@ class BrowserWrapper:
         self.platform = self.config_handler.get_config_value('platform')
         self.hub_url = self.config_handler.get_config_value('hub_url')
         self.url = self.config_handler.get_config_value('url')
+        self.apiWrapper = APIWrapper()
+        self.pet_url = self.apiWrapper.base_url
 
     def get_driver(self, browser_type=None):
         if browser_type:
@@ -35,6 +39,9 @@ class BrowserWrapper:
 
     def get_url(self,driver):
         driver.get(self.url)
+
+    def get_url_Pet_Swagger(self,driver):
+        driver.get(self.pet_url)
 
     def get_remote_driver(self):
         for browser_type in self.browser_types:

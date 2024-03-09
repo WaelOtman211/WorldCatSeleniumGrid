@@ -16,6 +16,7 @@ class LocalizationTest(unittest.TestCase):
         driver = self.browser.get_driver(browser)
         self.browser.get_url(driver)
         localization_page = LocalizationPage(driver)
+
         self.assertTrue(localization_page.is_the_language_changed(),"The language is not French.")
 
 
