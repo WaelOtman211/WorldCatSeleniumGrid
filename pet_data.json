@@ -1,0 +1,18 @@
+{
+  "id": 3322332,
+  "category": {
+    "id": 0,
+    "name": "dogs"
+  },
+  "name": "roxi",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "roxi a good dog"
+    }
+  ],
+  "status": "available"
+}
