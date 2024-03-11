@@ -28,6 +28,7 @@ class TestPetLogic(unittest.TestCase):
         expected_id = self.get_pet_id
         expected_name = self.get_pet_name
         expected_status = self.get_pet_status
+
         self.assertEqual(self.pet_logic.get_pet_by_id(self.get_pet_id)['id'], expected_id)
         self.assertEqual(self.pet_logic.get_pet_by_id(self.get_pet_id)['name'], expected_name)
         self.assertEqual(self.pet_logic.get_pet_by_id(self.get_pet_id)['status'], expected_status)
@@ -44,10 +45,10 @@ class TestPetLogic(unittest.TestCase):
     def test_run_grid_parallel(self):
         if self.browser.grid_enabled and not self.browser.serial_enabled:
             with concurrent.futures.ThreadPoolExecutor(max_workers=len(self.browser.browser_types)) as executor:
-                executor.map(self.test_update_pet_by_id, self.browser.browser_types)
+                executor.map(self.test_find_pet_by_id, self.browser.browser_types)
 
         else:
-            self.test_update_pet_by_id(self.browser.default_browser)
+            self.test_find_pet_by_id(self.browser.default_browser)
 
 if __name__ == '__main__':
     unittest.main()
