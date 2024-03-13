@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 // Run your tests here
-                bat 'python -m unittest test.test_pet.py' // Replace with your test command
+                bat 'venv\\Scripts\\python.exe -m unittest test/test_pet.py' // Replace with your test command
                 echo 'test_pet run successfuly..'
             }
         }
