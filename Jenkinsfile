@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'pip install -r requirements.txt' // Install dependencies if needed
+                bat 'pip install -r requirements.txt' // Install dependencies if needed
 
             }
         }
@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 // Run your tests here
-                sh 'python -m unittest test_pet.py' // Replace with your test command
+                bat 'python -m unittest test_pet.py' // Replace with your test command
                 echo 'test_pet run successfuly..'
             }
         }
