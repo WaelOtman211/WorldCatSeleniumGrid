@@ -1,17 +1,12 @@
 pipeline {
     agent any
 
-    environment {
-        PIP_PATH = 'C:\\Users\\Moham\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\pip.exe'
-        PYTHON_PATH = 'C:\\Users\\Moham\\AppData\\Local\\Programs\\Python\\Python311\\python.exe'
-    }
-
     stages {
         stage('Setup Environment') {
             steps {
                 echo '$path'
                 echo 'Setting up Python environment...'
-                bat 'C:\\Users\\Moham\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m venv venv'
+                bat 'C:\Python311\\python.exe -m venv venv'
                 bat 'venv\\Scripts\\python.exe -m pip install --upgrade pip'
                 bat 'venv\\Scripts\\pip.exe install -r requirements.txt'
             }
