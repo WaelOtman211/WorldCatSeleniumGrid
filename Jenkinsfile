@@ -5,7 +5,6 @@ pipeline {
             steps {
                 echo 'Building..'
                 bat 'pip install -r requirements.txt' // Install dependencies if needed
-                echo $path
             }
         }
          stage('Test') {
