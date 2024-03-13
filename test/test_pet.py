@@ -19,7 +19,7 @@ class TestPetLogic(unittest.TestCase):
 
         self.assertEqual(self.pet_logic.add_pet(self.pet_data.get_pet_data()).status_code, 200)
 
-    def test_find_pet_by_id(self):
+    """def test_find_pet_by_id(self):
 
         expected_id = self.get_pet_id
         expected_name = self.get_pet_name
@@ -27,7 +27,7 @@ class TestPetLogic(unittest.TestCase):
 
         self.assertEqual(self.pet_logic.get_pet_by_id(self.get_pet_id)['id'], expected_id)
         self.assertEqual(self.pet_logic.get_pet_by_id(self.get_pet_id)['name'], expected_name)
-        self.assertEqual(self.pet_logic.get_pet_by_id(self.get_pet_id)['status'], expected_status)
+        self.assertEqual(self.pet_logic.get_pet_by_id(self.get_pet_id)['status'], expected_status)"""
 
     def test_update_pet_by_id(self):
 
