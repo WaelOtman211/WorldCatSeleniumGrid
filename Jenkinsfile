@@ -12,8 +12,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 // Run your tests here
-                bat 'python -m unittest C:/Users/saher/OneDrive/קבצים מצורפים/שולחן העבודה/repos/WorldCatSeleniumGrid/test/test_pet.py' // Replace with your test command
-                echo 'test_pet run successfuly..'
+                bat 'python test/test_pet.py'
             }
         }
         stage('Deploy') {
