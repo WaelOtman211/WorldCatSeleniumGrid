@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 // Run your tests here
-                bat 'python test_pet.py'
+                bat 'python test/test_pet.py'
             }
         }
         stage('Deploy') {
