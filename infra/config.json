@@ -1,8 +1,8 @@
 {
   "url": "https://search.worldcat.org/",
   "hub_url": "http://localhost:4444/wd/hub",
-  "grid": true,
-  "serial": false,
+  "grid": false,
+  "serial": true,
   "browser":"chrome",
   "platform": "windows",
   "browser_types": ["chrome","fireFox","edge"]

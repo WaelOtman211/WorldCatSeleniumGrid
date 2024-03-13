@@ -26,7 +26,7 @@ class FilterPage(Base_Page):
         self.filter_button = self._driver.find_element(By.XPATH, self.FILTER_BUTTON)
 
     def press_cookies_button(self):
-        time.sleep(2)
+
         cookies_button = WebDriverWait(self._driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, self.COOKIES_BUTTON))
         )
