@@ -1,5 +1,5 @@
 from selenium import webdriver
-
+from jira import JIRA
 from infra.api_wrapper import APIWrapper
 from infra.config_handler import ConfigHandler
 
@@ -18,6 +18,9 @@ class BrowserWrapper:
         self.url = self.config_handler.get_config_value('url')
         self.apiWrapper = APIWrapper()
         self.pet_url = self.apiWrapper.base_url
+        self.jira_url = 'https://waelotman211.atlassian.net/jira/your-work'
+
+
 
     def get_driver(self, browser_type=None):
         if browser_type:

@@ -1,7 +1,7 @@
 import concurrent.futures
 import unittest
 from infra.browser_wrapper import BrowserWrapper
-from logic.signIn_page import SignInPage  # Renamed to reflect new focus
+from logic.logic_ui.signIn_page import SignInPage  # Renamed to reflect new focus
 
 
 class SignInTest(unittest.TestCase):

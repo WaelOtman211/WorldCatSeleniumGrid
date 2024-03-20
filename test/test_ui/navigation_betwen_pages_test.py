@@ -1,7 +1,7 @@
 import concurrent.futures
 import unittest
 from infra.browser_wrapper import BrowserWrapper
-from logic.navigation_between_pages import NavigationPage  # Renamed to reflect new focus
+from logic.logic_ui.navigation_between_pages import NavigationPage  # Renamed to reflect new focus
 
 
 class NavigationTest(unittest.TestCase):

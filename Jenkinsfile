@@ -13,7 +13,7 @@ pipeline {
                 echo 'Testing..'
                 // Run your tests here
                 bat 'python test_pet.py'
-                bat 'python filter_page_test.py'
+                bat 'python filter_page_test.py    '
             }
         }
         stage('Deploy') {

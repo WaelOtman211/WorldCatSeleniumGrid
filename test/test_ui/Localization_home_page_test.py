@@ -2,7 +2,7 @@ import concurrent.futures
 import unittest
 
 from infra.browser_wrapper import BrowserWrapper
-from logic.Localization_home_page import LocalizationPage
+from logic.logic_ui.Localization_home_page import LocalizationPage
 
 
 class LocalizationTest(unittest.TestCase):
@@ -24,6 +24,7 @@ class LocalizationTest(unittest.TestCase):
         driver = self.browser.get_driver(browser)
         self.browser.get_url(driver)
         localization_page = LocalizationPage(driver)
+
         localization_page.search_for_library_due_to_location("United States", "Yokneam Ilit")
         expected_result="We didn't find any results."
         self.assertEqual(expected_result,localization_page.dose_found_any_librarys())

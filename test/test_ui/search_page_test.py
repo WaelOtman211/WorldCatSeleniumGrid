@@ -1,7 +1,7 @@
 import concurrent.futures
 import unittest
 from infra.browser_wrapper import BrowserWrapper
-from logic.search_page import SearchPage  # Renamed to reflect new focus
+from logic.logic_ui.search_page import SearchPage  # Renamed to reflect new focus
 
 
 class SearchTest(unittest.TestCase):

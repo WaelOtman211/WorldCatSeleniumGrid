@@ -2,7 +2,7 @@ import concurrent.futures
 import unittest
 from infra.api_wrapper import APIWrapper
 from infra.browser_wrapper import BrowserWrapper
-from logic.user_logic import UserLogic
+from logic.logic_api.user_logic import UserLogic
 
 
 class TestUserLogic(unittest.TestCase):
